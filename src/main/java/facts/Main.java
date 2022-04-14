@@ -34,7 +34,7 @@ public class Main {
         });
 
         List<Cat> filterCats = listCats.stream()
-                .filter(value -> value.getUpvotes() != null && Integer.parseInt(value.getUpvotes()) > 0)
+                .filter(value -> value.getUpvotes() != 0 && value.getUpvotes() > 0)
                 .collect(Collectors.toList());
 
         filterCats.forEach(p -> System.out.println(p.getText()));

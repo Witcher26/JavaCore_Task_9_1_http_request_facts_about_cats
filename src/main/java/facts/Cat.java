@@ -2,15 +2,18 @@ package facts;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import java.io.Serializable;
 
-public class Cat implements Serializable {
-
+public class Cat {
+    @JsonProperty
     private String id;
+    @JsonProperty
     private String text;
+    @JsonProperty
     private String type;
+    @JsonProperty
     private String user;
-    private String upvotes;
+    @JsonProperty
+    private int upvotes;
 
     public String getId() {
         return id;
@@ -48,11 +51,11 @@ public class Cat implements Serializable {
         return this;
     }
 
-    public String getUpvotes() {
+    public int getUpvotes() {
         return upvotes;
     }
 
-    public Cat setUpvotes(String upvotes) {
+    public Cat setUpvotes(int upvotes) {
         this.upvotes = upvotes;
         return this;
     }
